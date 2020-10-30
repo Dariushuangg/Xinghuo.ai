@@ -6,6 +6,7 @@
 </p>
 Xinghuo.ai is a drowsy driving solution built upon VisionSeed module, WeChat Mini-app ecosystem, and pruned ResNet-based transfer learning model with TensorFlow 2.0
 
+
 ### Repo Guide
 File Name | Description
 ------------ | -------------
@@ -15,19 +16,23 @@ Xinghuo_ai WeChat MiniApp/xinghuo_ai | Code for WeChat MiniApp; Ran on users' ph
 Xinghuo_ai Web API | Code for the Web API that provide user data stored in WeChat cloud upon request from businesses; Ran on a remote server with Node PM2. 
 Extra Materials (Market Research, Pitch Deck etc.) | PPT, Pdf and image of the market/product research, pitch deck, and handouts we've created for our project.
 
+
 ### Tech Stack used: 
 1. VisionSeed (Gladly provided by Tencent Youtu Lab, the undisputed best AI Lab in Tencent)
 2. AI toolkits (TensorFlow 2.0 Keras, OpenCV, Tfmot)
-3. Web Full Stack (HTML, CSS, Native JS & Express/Axios, MongoDB)
+3. Web Full Stack (Wx version of HTML & ColorUI, CSS, Native JS & Express/Axios, MongoDB)
 4. Other hardwares & software dev skills
+
 
 ### Creator: 
 1. Charlie Chen (SMS-NYU CS '24)
 2. Darius Huang (SMS-Rice Engineering '25)
 3. Ricky Li (SMS-Oxford Engineering '23)
 
+
 ### Contributor: 
 1. 小曲老师 (?-?)
+
 
 ### Complete Product: 
 <p align="center">
