@@ -7,7 +7,7 @@ Xinghuo.ai is a drowsy driving solution built upon: VisionSeed module (provided 
 3. Web Full Stack (HTML, CSS, Native JS & Express/Axios, MongoDB)
 4. Other hardwares & software dev skills
 
-### Creater: 
+### Creator: 
 1. Charlie Chen (SMS-NYU CS '24)
 2. Darius Huang (SMS-Rice Engineering '25)
 3. Ricky Li (SMS-Oxford Engineering '23)
