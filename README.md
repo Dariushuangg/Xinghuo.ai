@@ -1,7 +1,9 @@
 # Xinghuo.ai
 Xinghuo.ai is a drowsy driving solution built upon VisionSeed module, WeChat Mini-app ecosystem, and pruned ResNet-based transfer learning model with TensorFlow 2.0
 
-<center>![Xinghuo.ai Logo](/Logo.png)<center>
+<p align="center">
+  ![Xinghuo.ai Logo](/Logo.png)
+</p>
   
 ### Tech Stack used: 
 1. VisionSeed (Gladly provided by Tencent Youtu Lab, the undisputed best AI Lab in Tencent)
