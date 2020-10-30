@@ -4,7 +4,7 @@
 <p align="center">
   <img width="460" height="300" src="/Logo.png">
 </p>
-Xinghuo.ai is a drowsy driving solution built upon VisionSeed module, WeChat Mini-app ecosystem, and pruned ResNet-based transfer learning model with TensorFlow 2.0
+Xinghuo.ai is a drowsy driving solution built upon VisionSeed module, WeChat Mini-app ecosystem, and pruned ResNet-based transfer learning model with TensorFlow 2.0.
 
 
 ### Repo Guide
@@ -34,7 +34,8 @@ Extra Materials (Market Research, Pitch Deck etc.) | PPT, Pdf and images of the 
 1. 小曲老师 (?-?)
 
 
-### Complete Product: 
+### What we got: 
 <p align="center">
   <img width="460" height="300" src="/complete_product_img.png">
 </p>
+(and also internship offers from Tecent. Tencent NO.1!)
