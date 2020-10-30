@@ -1,0 +1,7 @@
+{
+    "board": "esp32:esp32:pico32",
+    "configuration": "PartitionScheme=default,UploadSpeed=115200,DebugLevel=none",
+    "sketch": "MyCode.ino",
+    "programmer": "AVR ISP",
+    "port": "COM5"
+}
