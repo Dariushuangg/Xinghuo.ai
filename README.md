@@ -19,3 +19,8 @@ Xinghuo.ai is a drowsy driving solution built upon VisionSeed module, WeChat Min
 
 ### Contributor: 
 1. 小曲老师 (?-?)
+
+### Complete Product: 
+<p align="center">
+  <img width="460" height="300" src="/complete_product_img.png">
+</p>
