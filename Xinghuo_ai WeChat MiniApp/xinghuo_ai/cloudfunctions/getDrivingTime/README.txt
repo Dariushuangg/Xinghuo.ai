@@ -1,0 +1,1 @@
+Out of security considerations, the realization of this cloud function is deleted.

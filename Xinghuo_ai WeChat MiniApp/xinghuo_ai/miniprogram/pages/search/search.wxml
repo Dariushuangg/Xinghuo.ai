@@ -1,0 +1,28 @@
+<view class="container">
+
+  <!--返回条-->
+  <view class="margin-top-xl cu-bar bg-white">
+    <view class="action">
+      <text class="cuIcon-back text-gray" bindtap="navigateTo_index">返回</text>
+    </view>
+    <view class="content text-bold">配对VisionSeed检测仪</view>
+  </view>
+  
+<!--<button bindtap="test">测试-成功连接</button>-->
+
+  <!--设备列表-->
+  <scroll-view scroll-y style="width:690rpx;height:{{list_height}}rpx">
+    <block wx:for="{{devicesList}}" wx:key="deviceId">
+      <view class="list-item" id="{{item.deviceId}}" bindtap="Connect">
+        <view style="display:flex;flex-direction:column;width:80%">
+          <text style="font-size:medium;word-break:break-all">设备名称: {{item.name}}</text>
+          <text style="font-size:x-small;color:gray;word-break:break-all">设备ID: {{item.deviceId}}</text>
+          <text style="font-size:x-small;color:gray;word-break:break-all">信号强度RSSI: {{item.RSSI}}</text>
+        </view>
+        <image style="width:36px;height:36px" mode="aspectFit" src="/images/bluetooth.png"></image>
+      </view>
+    </block>
+  </scroll-view>
+
+  <button type="primary" class="button" loading="{{searching}}" bindtap="Search">{{searching?"搜索中...":"开始搜索"}}</button>
+</view>

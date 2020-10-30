@@ -1,0 +1,23 @@
+{
+  "pages": [
+    "pages/board/board",
+    "pages/index/index",
+    "pages/web/web",
+    "pages/search/search",
+    "pages/poster/poster",
+    "pages/history/history"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "加载中",
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "white"
+  },
+  
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom"
+  },
+  "sitemapLocation": "sitemap.json"
+}

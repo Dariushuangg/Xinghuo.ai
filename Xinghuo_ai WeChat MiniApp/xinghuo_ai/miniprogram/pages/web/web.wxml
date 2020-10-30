@@ -1,0 +1,4 @@
+<!--pages/web/web.wxml-->
+<view>
+<web-view src='http://111.229.247.207/xinghuo/blog/index.html'></web-view>
+</view>

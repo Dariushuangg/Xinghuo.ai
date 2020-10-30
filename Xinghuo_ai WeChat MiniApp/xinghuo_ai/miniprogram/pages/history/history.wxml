@@ -1,0 +1,73 @@
+<!--返回条-->
+  <view class="margin-top-xl cu-bar bg-white">
+    <view class="action">
+      <text class="cuIcon-back text-gray" bindtap="navigateTo_board">返回</text>
+       <view class="content text-bold">最新检测报告与历史记录</view>
+    </view>
+  </view>
+
+<!--最新报告-->
+<view class="cu-card dynamic {{isCard?'no-card':''}}">
+  <!--有检测-->
+  <view wx:if="{{!(local_time==1)}}" class="cu-item shadow" bindtap="navigateTo_poster">
+    <view class="cu-list menu-avatar">
+      <view class="cu-item">
+        <view class="cu-avatar round lg" style="background-image:url({{userInfo.avatarUrl}});"></view>
+        <view class="content flex-sub">
+          <view>{{userInfo.nickName}}的最新检测报告</view>
+          <view class="text-gray text-sm flex justify-between">
+            检测时间：{{local_time}}
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="text-content">
+      本次驾驶共出现{{local_total_detected}}次不安全驾驶征兆。其中，闭眼时间过长{{local_total_eye_freq}}次；打哈欠发生{{local_total_yaw_freq}}次；闭眼时间超过2秒发生{{local_total_eye}}次。请注意及时停车休息！
+    </view>
+    <view class="grid flex-sub padding-lr {{isCard?'col-3 grid-square':'col-1'}}">
+      <view class="bg-img {{isCard?'':'only-img'}}" style="background-image:url(https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2098325155,1693789417&fm=26&gp=0.jpg);" wx:for="{{isCard?9:1}}" wx:key="{{index}}">
+      </view>
+    
+    </view>
+    <view class="text-gray text-sm text-right padding">
+    <view>点击获取分享海报</view>
+    </view>
+  </view>
+  <!--无检测-->
+    <view wx:if="{{local_time=='1'}}" class="cu-item shadow">
+    <view class="cu-list menu-avatar">
+      <view class="cu-item">
+        <view class="cu-avatar round lg" style="background-image:url({{userInfo.avatarUrl}});"></view>
+        <view class="content flex-sub">
+          <view>{{userInfo.nickName}}的最新检测报告</view>
+        </view>
+      </view>
+    </view>
+    <view class="text-content">
+        暂无最新检测报告！请回到主页，点击“开始AI检测”并检测后再访问本页获取报告。
+    </view>
+    <view class="grid flex-sub padding-lr {{isCard?'col-3 grid-square':'col-1'}}">
+      <view class="bg-img {{isCard?'':'only-img'}}" style="background-image:url(https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2098325155,1693789417&fm=26&gp=0.jpg);" wx:for="{{isCard?9:1}}" wx:key="{{index}}">
+      </view>
+    </view>
+    <view class="text-gray text-sm text-right padding">
+    </view>
+  </view>
+  
+
+<view class="cu-bar bg-white solid-bottom margin-top">
+<view class="action">
+      <text class="cuIcon-title text-orange "></text> 历史检测报告记录
+    </view>
+</view>
+<!--历史报告-->
+<view class="cu-timeline" wx:for="{{history}}">
+  <view class="cu-item text-blue">
+    <view class="bg-blue content">
+      <text>{{item.time}}的记录：</text>共检测到{{item.total_detected}}次不安全驾驶行为！
+    </view>
+  </view>
+</view>
+
+
+</view>

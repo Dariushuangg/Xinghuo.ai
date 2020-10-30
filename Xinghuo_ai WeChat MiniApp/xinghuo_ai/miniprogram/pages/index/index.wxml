@@ -1,0 +1,143 @@
+<view class="bg-img bg-mask padding-tb-xl" style="background-image: url('https://636c-cloud1-nhw9y-1302995240.tcb.qcloud.la/bg_road.jpg?sign=94a7d01a164bc35ee2e57e541bc4764a&t=1598690964');height:{{user_height}}px">
+  <view class="padding-xl text-white">
+    <view class="padding-xs text-xl">
+      星火智行
+    </view>
+    <view class="padding-xs">
+      星火AI陪伴您安全出行
+    </view>
+  </view>
+
+<block wx:if="{{!(local_has_BLEConnected)}}"> 
+      <view class="flex padding align-end justify-center" style="top:60%">
+      <button class="basis-xl cu-btn round lines-yellow button-hover" bindtap="detection_start">
+          开始陪伴
+      </button>
+   </view>
+</block>
+
+  <!--正在检测-->
+<view wx:if="{{local_has_BLEConnected}}">
+    <view>
+    <view>
+
+    </view>
+
+    <!--即时检测结果-->
+    <view wx:if="{{local_has_BLEConnected && hasStartedDetection}}" class="align-start">
+      <view class="align-start cu-card case">
+        <view class="cu-item shadow">
+          <view class="image">
+           <view class="cu-bar bg-shadeBottom">
+              <text>安全驾驶报告生成中，请专心驾驶！</text>
+            </view>
+          </view>
+          <view class="cu-list menu-avatar">
+            <view class="cu-item">
+              <view class="cu-avatar round lg" style="background-image:url(https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3679911457,1776887069&fm=26&gp=0.jpg);">
+                <view class="content flex-sub">
+                  <view class="text-grey">
+                    设备信息：{{name}}-AI检测中...
+                  </view>
+                  <view class="text-gray text-sm flex justify-between"> 
+                    {{local_has_BLEConnected?"已连接":"已断开"}}
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+      <!--检测目标及状态栏-->
+  <view class="cu-bar bg-white solid-bottom margin-top">
+    <view class="action">
+      <text class="cuIcon-title text-orange "></text> 检测目标
+    </view>
+  </view>
+
+
+  <view class="cu-list menu-avatar">
+     <view class="cu-item {{eye_freq_colorChange}}">
+      <view class="cu-avatar round lg" style="background-image:url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1598162838406&di=f9d2bb56cc0e36d08d7a281ff5f6f9fb&imgtype=0&src=http%3A%2F%2Fp3.ssl.cdn.btime.com%2Ft01464ba1192f5ee71d.gif%3Fsize%3D480x360);"></view>
+      <view class="content">
+        <view class="text-grey">闭眼时长占比</view>
+        <view class="text-gray text-sm flex">
+          <text class="text-cut">
+							<text class="cuIcon-infofill text-red  margin-right-xs"></text>闭眼时长是否超过个人习惯
+          </text>
+        </view>
+      </view>
+    </view>
+
+    <view class="cu-item {{eye_colorChange}}">
+      <view class="cu-avatar round lg" style="background-image:url(https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=911152581,774118312&fm=15&gp=0.jpg);"></view>
+      <view class="content">
+        <view class="text-grey">闭眼时长</view>
+        <view class="text-gray text-sm flex">
+          <text class="text-cut">
+							<text class="cuIcon-infofill text-red  margin-right-xs"></text>闭眼时长是否超过2秒
+          </text>
+        </view>
+      </view>
+    </view>
+
+    <view class="cu-item {{yaw_freq_colorChange}}">
+      <view class="cu-avatar round lg" style="background-image:url(https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2126993433,491747214&fm=26&gp=0.jpg);"></view>
+      <view class="content">
+        <view class="text-grey">是否打哈欠</view>
+        <view class="text-gray text-sm flex">
+          <text class="text-cut">
+							<text class="cuIcon-infofill text-red  margin-right-xs"></text>是否正在打哈欠
+          </text>
+        </view>
+      </view>
+    </view>
+
+  </view>
+      <!--状态提示栏-->
+      <view wx:if="{{!(hasStartedDetection)}}" class="cu-load bg-green requestStart" bindtap="Send_start"></view>
+      <view wx:if="{{!(local_isAsleep) && hasStartedDetection &&!(local_noFace)}}" class="cu-load bg-blue loading"></view>
+      <view wx:if="{{!(local_isAsleep) && hasStartedDetection &&(!local_noFace)}}" bindtap="stopDetection" class="cu-load bg-grey">停止检测</view>
+
+      <view wx:if="{{local_isAsleep}}" class="cu-load bg-red erro"></view>
+      <view wx:if="{{local_noFace}}" class="cu-load bg-yellow NoFace"></view>
+
+
+
+
+</view>
+
+
+</view>
+  <button bindtap="test_closed">测试 传来 closed</button>
+    <button bindtap="test_open">测试 传来open</button>
+    <button bindtap="test_noFace">测试 传来no face</button>
+    <button bindtap="test_multiInfo_2">测试传来 2</button>
+    <button bindtap="test_multiInfo_8">测试传来 8</button>
+    <button bindtap="test_multiInfo_12">测试传来 12</button>
+
+<text>binary_receivedText: {{log_binary_receivedText}}####</text>
+<text>int_receivedText:{{log_int_receivedText}}####</text>
+  <!--之前的驾驶报告
+  <view class="cu-list menu" wx:for="{{user_reports}}">
+    <view class="cu-item">
+      <view class="content">
+        <text class="text-grey">
+          {{item}}
+        </text>
+      </view>
+    </view>
+  </view>
+-->
+
+  
+
+
+
+<!--
+<navigator url="/pages/demo/demo">test audio</navigator>
+-->

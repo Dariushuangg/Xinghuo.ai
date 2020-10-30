@@ -1,0 +1,80 @@
+<!--用户信息-->
+<view class="margin-top-xl justify-start cu-bar bg-white solid-bottom">
+      <view class="cu-avatar round" style="background-image:url({{userInfo.avatarUrl}});"></view>
+      <text>-{{userInfo.nickName}}</text>
+</view>
+
+<!--菜单-->
+<view class="cu-list grid col-3 no-border" wx:if="{{hasUserInfo}}">
+  <view class="cu-item" bindtap="navigateTo_index">
+    <view class="cuIcon-recordfill text-olive">
+      <text>开始AI检测</text>
+    </view>
+  </view>
+  <view class="cu-item" bindtap="navigateTo_posterHistory">
+    <view class="cuIcon-formfill text-orange">
+      <text>驾驶安全报告</text>
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="cuIcon-global text-red" bindtap="navigateTo_web">
+      <text>了解更多</text>
+    </view>
+  </view>
+</view>
+
+<view class="cu-bar bg-white solid-bottom margin-top">
+<view class="action">
+      <text class="cuIcon-title text-orange "></text> 使用教程
+    </view>
+</view>
+
+<!--教程-->
+  <view class="padding-lr bg-white margin-top">
+    <view class="solid-bottom padding">
+    <text class="text-Abc">Hi {{userInfo.nickName}}! 欢迎使用星火智行App!</text>
+
+    </view>
+    <view class="padding" wx:if="{{scroll+1==1}}">这是一款由深圳中学高三学生研发的微信小程序。我们利用人工智能技术自动识别使用者的驾驶状态，记录不规范驾驶行为并在使用者做出危险行为时预警。请您点击下方登录按钮开始使用！</view>
+    
+        <view class="padding" wx:if="{{scroll+1==2}}">
+    星火智行小程序需要搭配VisionSeed视觉模组使用。请您确保手机蓝牙已经打开，且VisionSeed模组已经通电并完成位置校准。在点击"开始AI监测"后，请根据指引，通过蓝牙连接VisionSeed设备。</view>
+
+        <view class="padding" wx:if="{{scroll+1==3}}">
+        在AI监测开始后，任何检测指标出现异常值都会触发警报并被记录。请您将手机音量调至最大并外放，以便及时对警报做出反应。注: 若出现黄色"未检测到人脸"警示条，请及时调整VisionSeed位置直至警示条消失</view>
+
+        <view class="padding" wx:if="{{scroll+1==4}}">
+        您可以在“驾驶安全报告”中查看您本次驾驶以及最近几次驾驶的安全检测报告。您还可以将您的驾驶记录以海报的形式保存并分享给家人与朋友，让他们更好地监督您安全驾驶。
+        </view>
+
+  <view class="padding" wx:if="{{scroll+1==5}}">
+  以上就是星火智行小程序的基础功能介绍。为了保证您专心驾驶，在点击“开始AI检测”后，您在停止检测前将无法浏览其它内容。请点击下方按钮，开始享受安全旅途！
+</view>
+
+  </view>
+
+
+<!--步骤条-->
+<scroll-view scroll-x class="bg-white padding response cu-steps steps-bottom" scroll-into-view="scroll-{{scroll}}" scroll-with-animation>
+    <view class="cu-item {{index>scroll?'':'text-green'}} padding-lr-xl" wx:for="{{5}}" wx:key id="scroll-{{index}}"><!--在这里设置次数-->
+    第{{index + 1}}步 <text class="num" data-index="{{index + 1}}"></text>
+    </view>
+</scroll-view>
+
+
+<!--按钮-->
+<view class="padding flex flex-direction">
+  <button class="cu-btn bg-green lg" bindtap="scrollSteps" wx:if="{{scroll!=4 && hasUserInfo}}">下一步</button>
+  <button class="cu-btn bg-yellow margin-tb-sm lg" bindtap="navigateTo_index" wx:if="{{scroll==4 && hasUserInfo}}">开始AI检测</button>
+  <button class="cu-btn bg-grey margin-tb-sm lg" bindtap="scrollStepsBack" wx:if="{{hasUserInfo}}">回上一步看看</button>
+  <button class="cu-btn bg-green margin-tb-sm lg" wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">微信登录</button>
+</view>
+
+<!--调试-->
+<text>{{}}</text>
+
+
+
+
+
+

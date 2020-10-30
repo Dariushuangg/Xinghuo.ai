@@ -1,0 +1,14 @@
+  <!--返回条-->
+  <view class="margin-top-xl cu-bar bg-white">
+    <view class="action">
+      <text class="cuIcon-back text-gray" bindtap="navigateTo_history">返回</text>
+      <view class="content text-bold">下滑至底部保存海报手机</view>
+    </view>
+  </view>
+
+<view wx:if="{{startDraw}}">
+  <canvas canvas-id="shareCanvas" style="width:{{clientWinWidth}}px;height:{{clientWinHeight}}px"></canvas> 
+</view>
+
+<button bindtap="draw" wx:if="{{!startDraw}}">点击绘制海报</button>
+<button type="primary" bindtap="daochu" wx:if="{{startDraw}}">点我保存</button>
