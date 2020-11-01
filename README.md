@@ -38,4 +38,3 @@ Extra Materials (Market Research, Pitch Deck etc.) | PPT, Pdf and images of the 
 <p align="center">
   <img width="460" height="300" src="/complete_product_img.png">
 </p>
-(and also internship offers from Tencent. Tencent NO.1!)
