@@ -24,14 +24,10 @@ Extra Materials (Market Research, Pitch Deck etc.) | PPT, Pdf and images of the 
 4. Other hardwares & software dev skills
 
 
-### Co-creators: 
+### Team: 
 1. Charlie Chen (SMS-NYU CS '24)
 2. Darius Huang (SMS-Rice Engineering '25)
 3. Ricky Li (SMS-Oxford Engineering '23)
-
-
-### Contributor: 
-1. 小曲老师 (?-?)
 
 
 ### What we got: 
