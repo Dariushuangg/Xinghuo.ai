@@ -25,8 +25,8 @@ Extra Materials (Market Research, Pitch Deck etc.) | PPT, Pdf and images of the 
 
 
 ### Team: 
-1. Charlie Chen (SMS-NYU CS '24)
-2. Darius Huang (SMS-Rice Engineering '25)
+1. Charlie Chen (SMS-NYU CS '24): ML, Visionseed & ESP32 deployment
+2. Darius Huang (SMS-Rice Engineering '25): ML (Bayesian Opt, Prunning), Mini-app, Web API & Websites
 3. Ricky Li (SMS-Oxford Engineering '23)
 
 
