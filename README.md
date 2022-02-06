@@ -17,17 +17,14 @@ Xinghuo_ai Web API | Code for the Web API that provide user data stored in WeCha
 Extra Materials (Market Research, Pitch Deck etc.) | PPT, Pdf and images of the market/product research, pitch deck, and handouts we've created for our project.
 
 
-### Tech Stacks used: 
+### Tech Stacks: 
 1. VisionSeed (Gladly provided by Tencent Youtu Lab, the undisputed best AI Lab in Tencent)
 2. AI toolkits (TensorFlow 2.0 Keras, OpenCV, Tfmot)
 3. Web Full Stack (Wx version of HTML & ColorUI, CSS, Native JS & Express/Axios, MongoDB)
 4. Other hardwares & software dev skills
 
 
-### Team: 
-1. Charlie Chen (SMS-NYU CS '24): ML, Visionseed & ESP32 deployment
-2. Darius Huang (SMS-Rice Engineering '25): ML (Bayesian Opt, Prunning), Mini-app, Web API & Websites
-3. Ricky Li (SMS-Oxford Engineering '23)
+### ppl: Darius, Charlie, Ricky
 
 
 ### What we got: 
